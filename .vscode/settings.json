@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "draw.h": "c",
+    "input.h": "c",
+    "stage.h": "c"
+  }
+}

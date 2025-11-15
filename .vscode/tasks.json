@@ -1,0 +1,69 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "G++ build SDL2 project (MinGW)",
+      "command": "g++",
+      "args": [
+        "-g",
+
+        // --- SOURCE FILES ---
+        "D:\\2d_trial one\\main.c",
+        "D:\\2d_trial one\\init.c",
+        "D:\\2d_trial one\\draw.c",
+        "D:\\2d_trial one\\input.c",
+        "D:\\2d_trial one\\stage.c",
+        "D:\\2d_trial one\\util.c",
+        "D:\\2d_trial one\\text.c",
+
+        "-o",
+        "D:\\2d_trial one\\game.exe",
+
+        // --- INCLUDE PATHS ---
+        "-I",
+        "${workspaceFolder}",
+        "-I",
+        "D:/SDL/x86_64-w64-mingw32/include",
+        "-I",
+        "D:/SDL/x86_64-w64-mingw32/include/SDL2",
+        "-I",
+        "D:/SDL_image/x86_64-w64-mingw32/include",
+        "-I",
+        "D:/SDL_image/x86_64-w64-mingw32/include/SDL2",
+        "-I",
+        "D:/SDL2_ttf/SDL2_ttf-2.24.0/x86_64-w64-mingw32/include",
+        "-I",
+        "D:/SDL2_ttf/SDL2_ttf-2.24.0/x86_64-w64-mingw32/include/SDL2",
+
+        // --- LIBRARY PATHS ---
+        "-L",
+        "D:/SDL/x86_64-w64-mingw32/lib",
+        "-L",
+        "D:/SDL_image/x86_64-w64-mingw32/lib",
+
+        // --- LIBRARIES (FIXED) ---
+        "-lmingw32",
+        "-lSDL2main",
+
+        // --- THIS IS THE FIX ---
+        
+        "D:/SDL2_ttf/SDL2_ttf-2.24.0/x86_64-w64-mingw32/lib/libSDL2_ttf.dll.a",
+        
+        "-lSDL2_image",
+        "-lSDL2",
+
+        // Dependencies for the import library (from the .la file)
+        "-lgdi32",
+        "-lusp10",
+        "-lrpcrt4"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "CMake template build task"
+    }
+  ]
+}
