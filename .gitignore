@@ -1,0 +1,14 @@
+# Compiled binaries
+*.exe
+*.o
+*.obj
+
+# User data
+highscore.txt
+
+# IDE settings
+.vscode/
+
+# OS generated files
+Thumbs.db
+.DS_Store
